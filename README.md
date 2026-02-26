@@ -1,8 +1,8 @@
-# 🚀 Founder-Facing BI Agent (monday.com)
+#  Founder-Facing BI Agent (monday.com)
 
 A high-signal, conversational Business Intelligence agent designed for founders to monitor their deals and operations directly from monday.com data.
 
-## ✨ Core Features
+##  Core Features
 
 - **Live Data Processing**: Zero caching—every query fetches fresh data from the monday.com GraphQL API.
 - **Intent-Aware Analytics**: Uses LLM extraction to determine which boards, filters, and chart types (Line, Dual-Axis Bar, Status Breakdown) are needed.
@@ -11,14 +11,14 @@ A high-signal, conversational Business Intelligence agent designed for founders 
 - **Automatic Scaling**: Number and date normalization including shorthand support (e.g., '10m', '50k').
 - **Transparent Execution**: Integrated API Trace Dashboard showing every live call made during the interaction.
 
-## 🛠️ Architecture
+##  Architecture
 
 - **Frontend**: Streamlit (Reactive UI)
 - **Analytics**: Pandas (Deterministic metric computation)
 - **LLM**: Gemini 2.0 Flash (via OpenRouter)
 - **Integration**: monday.com GraphQL API v2
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Prerequisites
 Ensure you have Python 3.9+ installed and a monday.com API token.
@@ -44,11 +44,8 @@ pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
-## 📊 Mapping Documentation
+##  Mapping Documentation
 
 The system is pre-configured to handle standard CRM and Project Management schemas:
 - **Deals**: Maps stages (Lead -> Won) and sectors (Mining, Energy, etc.).
 - **Work Orders**: Uses "Execution Status" for operational tracking and "Probable End Date" for risk analysis.
-
----
-*Built with ❤️ for rapid business insights.*
