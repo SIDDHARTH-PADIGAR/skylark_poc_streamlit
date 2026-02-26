@@ -13,10 +13,18 @@ A high-signal, conversational Business Intelligence agent designed for founders 
 
 ##  Architecture
 
-- **Frontend**: Streamlit (Reactive UI)
-- **Analytics**: Pandas (Deterministic metric computation)
-- **LLM**: Gemini 2.0 Flash (via OpenRouter)
-- **Integration**: monday.com GraphQL API v2
+```mermaid
+graph TD
+    User((Founder)) -->|Query| Streamlit[Streamlit UI]
+    Streamlit -->|Extract Intent| LLM[LLM Handler: Gemini 2.0]
+    LLM -->|Structured Intent| Streamlit
+    Streamlit -->|Fetch Live Data| Monday[Monday API v2]
+    Monday -->|Raw JSON| Analytics[Analytics Engine: Pandas]
+    Analytics -->|Normalized Metrics| Streamlit
+    Streamlit -->|Synthesize| LLM
+    LLM -->|Business Summary| Streamlit
+    Streamlit -->|Insights + Charts| User
+```
 
 ##  Quick Start
 
