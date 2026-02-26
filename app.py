@@ -22,7 +22,7 @@ if "monday_traces" not in st.session_state:
     st.session_state.monday_traces = []
 
 # Header
-st.title("🚀 Founder BI Agent")
+st.title(" Founder BI Agent")
 st.markdown("---")
 
 # Sidebar - Config
